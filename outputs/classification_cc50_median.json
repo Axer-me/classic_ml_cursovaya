@@ -1,0 +1,116 @@
+{
+  "task": "classification_cc50_median",
+  "target": "CC50, mM",
+  "threshold": 411.0393423370522,
+  "comparison": [
+    {
+      "model": "LogisticRegression",
+      "cv_f1": 0.7659263046181517,
+      "best_params": {
+        "model__C": 0.01,
+        "model__penalty": "l2"
+      }
+    },
+    {
+      "model": "RandomForest",
+      "cv_f1": 0.7659080712231139,
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_f1": 0.7573410733731023,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 2,
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "SVC",
+      "cv_f1": 0.7557749803304485,
+      "best_params": {
+        "model__C": 1.0,
+        "model__gamma": "scale",
+        "model__kernel": "rbf"
+      }
+    }
+  ],
+  "best_model": "LogisticRegression",
+  "best_params": {
+    "model__C": 0.01,
+    "model__penalty": "l2"
+  },
+  "test_metrics": {
+    "accuracy": 0.7164179104477612,
+    "precision": 0.6837606837606838,
+    "recall": 0.8,
+    "f1": 0.7373271889400922,
+    "roc_auc": 0.8194059405940594
+  },
+  "top_features": [
+    {
+      "feature": "fr_NH2",
+      "importance": 0.24361980517444545
+    },
+    {
+      "feature": "fr_sulfide",
+      "importance": 0.1688535060096998
+    },
+    {
+      "feature": "NumSaturatedHeterocycles",
+      "importance": 0.16725171412720835
+    },
+    {
+      "feature": "fr_allylic_oxid",
+      "importance": 0.16072239439336308
+    },
+    {
+      "feature": "fr_unbrch_alkane",
+      "importance": 0.1518952505268472
+    },
+    {
+      "feature": "EState_VSA3",
+      "importance": 0.14810537133667445
+    },
+    {
+      "feature": "fr_quatN",
+      "importance": 0.13852932341525392
+    },
+    {
+      "feature": "NHOHCount",
+      "importance": 0.13469905909881583
+    },
+    {
+      "feature": "VSA_EState4",
+      "importance": 0.1328443570837598
+    },
+    {
+      "feature": "fr_piperzine",
+      "importance": 0.12856294821653844
+    },
+    {
+      "feature": "fr_Imine",
+      "importance": 0.1283716010114235
+    },
+    {
+      "feature": "PEOE_VSA8",
+      "importance": 0.11965777850521862
+    },
+    {
+      "feature": "EState_VSA4",
+      "importance": 0.11719999939187341
+    },
+    {
+      "feature": "fr_Ar_OH",
+      "importance": 0.11463723392239722
+    },
+    {
+      "feature": "fr_alkyl_carbamate",
+      "importance": 0.11259440259699
+    }
+  ]
+}

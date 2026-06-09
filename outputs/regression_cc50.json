@@ -1,0 +1,122 @@
+{
+  "task": "regression_cc50",
+  "target": "CC50, mM",
+  "log_transform": true,
+  "comparison": [
+    {
+      "model": "RandomForest",
+      "cv_rmse": 1.2196075562326636,
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_rmse": 1.2249419340192111,
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 2,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "SVR",
+      "cv_rmse": 1.270209670749756,
+      "best_params": {
+        "model__C": 10.0,
+        "model__epsilon": 0.1,
+        "model__gamma": "auto"
+      }
+    },
+    {
+      "model": "ElasticNet",
+      "cv_rmse": 1.3781746905748078,
+      "best_params": {
+        "model__alpha": 0.1,
+        "model__l1_ratio": 0.8
+      }
+    },
+    {
+      "model": "Ridge",
+      "cv_rmse": 1.9118300551785956,
+      "best_params": {
+        "model__alpha": 100.0
+      }
+    }
+  ],
+  "best_model": "RandomForest",
+  "best_params": {
+    "model__max_depth": 10,
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 100
+  },
+  "test_metrics": {
+    "rmse": 1.1373438383980592,
+    "mae": 0.8192517597908272,
+    "r2": 0.4312332499256898
+  },
+  "top_features": [
+    {
+      "feature": "BCUT2D_MWLOW",
+      "importance": 0.07219155147462777
+    },
+    {
+      "feature": "Kappa1",
+      "importance": 0.04185602851590551
+    },
+    {
+      "feature": "NHOHCount",
+      "importance": 0.04025825911058001
+    },
+    {
+      "feature": "VSA_EState8",
+      "importance": 0.036961184426293654
+    },
+    {
+      "feature": "VSA_EState6",
+      "importance": 0.03190608014162643
+    },
+    {
+      "feature": "Kappa3",
+      "importance": 0.027778034205734943
+    },
+    {
+      "feature": "PEOE_VSA6",
+      "importance": 0.025294681835652203
+    },
+    {
+      "feature": "Kappa2",
+      "importance": 0.023975702498641723
+    },
+    {
+      "feature": "PEOE_VSA7",
+      "importance": 0.021085869922623936
+    },
+    {
+      "feature": "MolLogP",
+      "importance": 0.020487905766826256
+    },
+    {
+      "feature": "VSA_EState4",
+      "importance": 0.020082278589545022
+    },
+    {
+      "feature": "BCUT2D_MRLOW",
+      "importance": 0.019761954923298745
+    },
+    {
+      "feature": "BCUT2D_LOGPHI",
+      "importance": 0.017734842403185524
+    },
+    {
+      "feature": "fr_C_O",
+      "importance": 0.016849957253613223
+    },
+    {
+      "feature": "PEOE_VSA8",
+      "importance": 0.01656099590167446
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+*.egg-info/
+.DS_Store
+
+generate_report.py
+курсовая по классическому ML.docx

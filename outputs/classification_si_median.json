@@ -1,0 +1,117 @@
+{
+  "task": "classification_si_median",
+  "target": "SI",
+  "threshold": 3.846153846153846,
+  "comparison": [
+    {
+      "model": "RandomForest",
+      "cv_f1": 0.6674400982085967,
+      "best_params": {
+        "model__max_depth": 20,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_f1": 0.6586238575291692,
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 2,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "LogisticRegression",
+      "cv_f1": 0.6489606245159469,
+      "best_params": {
+        "model__C": 1.0,
+        "model__penalty": "l2"
+      }
+    },
+    {
+      "model": "SVC",
+      "cv_f1": 0.6462862387109672,
+      "best_params": {
+        "model__C": 1.0,
+        "model__gamma": "auto",
+        "model__kernel": "rbf"
+      }
+    }
+  ],
+  "best_model": "RandomForest",
+  "best_params": {
+    "model__max_depth": 20,
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 200
+  },
+  "test_metrics": {
+    "accuracy": 0.6616915422885572,
+    "precision": 0.6904761904761905,
+    "recall": 0.58,
+    "f1": 0.6304347826086957,
+    "roc_auc": 0.6886633663366337
+  },
+  "top_features": [
+    {
+      "feature": "VSA_EState4",
+      "importance": 0.017571539292520963
+    },
+    {
+      "feature": "BCUT2D_LOGPHI",
+      "importance": 0.016303938734061347
+    },
+    {
+      "feature": "BCUT2D_CHGLO",
+      "importance": 0.015859430406862607
+    },
+    {
+      "feature": "BCUT2D_MWLOW",
+      "importance": 0.015801104871616567
+    },
+    {
+      "feature": "qed",
+      "importance": 0.01545198329769687
+    },
+    {
+      "feature": "BCUT2D_MRLOW",
+      "importance": 0.015331244494438977
+    },
+    {
+      "feature": "FractionCSP3",
+      "importance": 0.014972573297283416
+    },
+    {
+      "feature": "MinEStateIndex",
+      "importance": 0.014802504748637434
+    },
+    {
+      "feature": "MaxEStateIndex",
+      "importance": 0.014388432750157255
+    },
+    {
+      "feature": "MaxAbsEStateIndex",
+      "importance": 0.014259302957017439
+    },
+    {
+      "feature": "Chi3n",
+      "importance": 0.01363219599604105
+    },
+    {
+      "feature": "FpDensityMorgan3",
+      "importance": 0.012760593401107937
+    },
+    {
+      "feature": "BCUT2D_MRHI",
+      "importance": 0.01256933583452671
+    },
+    {
+      "feature": "HallKierAlpha",
+      "importance": 0.012350578329124784
+    },
+    {
+      "feature": "VSA_EState8",
+      "importance": 0.012204098751035184
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "task": "regression_ic50",
+  "target": "IC50, mM",
+  "log_transform": true,
+  "comparison": [
+    {
+      "model": "RandomForest",
+      "cv_rmse": 1.4163239501299931,
+      "best_params": {
+        "model__max_depth": 20,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_rmse": 1.429912869741266,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 2,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "SVR",
+      "cv_rmse": 1.452929521186979,
+      "best_params": {
+        "model__C": 1.0,
+        "model__epsilon": 0.1,
+        "model__gamma": "scale"
+      }
+    },
+    {
+      "model": "ElasticNet",
+      "cv_rmse": 1.5893046708735865,
+      "best_params": {
+        "model__alpha": 0.1,
+        "model__l1_ratio": 0.5
+      }
+    },
+    {
+      "model": "Ridge",
+      "cv_rmse": 1.7103281318740422,
+      "best_params": {
+        "model__alpha": 10.0
+      }
+    }
+  ],
+  "best_model": "RandomForest",
+  "best_params": {
+    "model__max_depth": 20,
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 200
+  },
+  "test_metrics": {
+    "rmse": 1.4484144705233244,
+    "mae": 1.137421135632984,
+    "r2": 0.45497359866525366
+  },
+  "top_features": [
+    {
+      "feature": "VSA_EState8",
+      "importance": 0.1401202927769481
+    },
+    {
+      "feature": "VSA_EState4",
+      "importance": 0.04911037103144476
+    },
+    {
+      "feature": "VSA_EState6",
+      "importance": 0.02960192427070434
+    },
+    {
+      "feature": "BCUT2D_MRLOW",
+      "importance": 0.024143469499038433
+    },
+    {
+      "feature": "PEOE_VSA1",
+      "importance": 0.022878929294978367
+    },
+    {
+      "feature": "MolLogP",
+      "importance": 0.02142159103297144
+    },
+    {
+      "feature": "FpDensityMorgan1",
+      "importance": 0.01870408433178491
+    },
+    {
+      "feature": "BCUT2D_CHGHI",
+      "importance": 0.01813440919965422
+    },
+    {
+      "feature": "EState_VSA2",
+      "importance": 0.0170274703591677
+    },
+    {
+      "feature": "qed",
+      "importance": 0.01636640006697959
+    },
+    {
+      "feature": "SlogP_VSA5",
+      "importance": 0.016056726963225826
+    },
+    {
+      "feature": "BalabanJ",
+      "importance": 0.01601833027558764
+    },
+    {
+      "feature": "PEOE_VSA7",
+      "importance": 0.014541001650958292
+    },
+    {
+      "feature": "EState_VSA5",
+      "importance": 0.014524841279891131
+    },
+    {
+      "feature": "Chi3n",
+      "importance": 0.01447545698876173
+    }
+  ]
+}

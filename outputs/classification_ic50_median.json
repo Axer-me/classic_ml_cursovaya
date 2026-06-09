@@ -1,0 +1,117 @@
+{
+  "task": "classification_ic50_median",
+  "target": "IC50, mM",
+  "threshold": 46.58518345980803,
+  "comparison": [
+    {
+      "model": "RandomForest",
+      "cv_f1": 0.7406516989030081,
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "SVC",
+      "cv_f1": 0.7340404187739291,
+      "best_params": {
+        "model__C": 1.0,
+        "model__gamma": "scale",
+        "model__kernel": "rbf"
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_f1": 0.7317839545555872,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 2,
+        "model__n_estimators": 200
+      }
+    },
+    {
+      "model": "LogisticRegression",
+      "cv_f1": 0.6950056927532046,
+      "best_params": {
+        "model__C": 0.01,
+        "model__penalty": "l2"
+      }
+    }
+  ],
+  "best_model": "RandomForest",
+  "best_params": {
+    "model__max_depth": 10,
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 100
+  },
+  "test_metrics": {
+    "accuracy": 0.736318407960199,
+    "precision": 0.7079646017699115,
+    "recall": 0.8,
+    "f1": 0.7511737089201878,
+    "roc_auc": 0.7896534653465347
+  },
+  "top_features": [
+    {
+      "feature": "BCUT2D_MRLOW",
+      "importance": 0.025921876429410573
+    },
+    {
+      "feature": "VSA_EState8",
+      "importance": 0.025835133703521116
+    },
+    {
+      "feature": "FpDensityMorgan3",
+      "importance": 0.01723968706760455
+    },
+    {
+      "feature": "EState_VSA8",
+      "importance": 0.016938834219429242
+    },
+    {
+      "feature": "SlogP_VSA5",
+      "importance": 0.01663702515779633
+    },
+    {
+      "feature": "VSA_EState4",
+      "importance": 0.016220883523552828
+    },
+    {
+      "feature": "BCUT2D_MWLOW",
+      "importance": 0.015690795682813237
+    },
+    {
+      "feature": "MolLogP",
+      "importance": 0.015410745494896334
+    },
+    {
+      "feature": "MinPartialCharge",
+      "importance": 0.01499793756406081
+    },
+    {
+      "feature": "PEOE_VSA9",
+      "importance": 0.014781827436861912
+    },
+    {
+      "feature": "PEOE_VSA6",
+      "importance": 0.013583067678194177
+    },
+    {
+      "feature": "TPSA",
+      "importance": 0.013516193191382937
+    },
+    {
+      "feature": "MaxPartialCharge",
+      "importance": 0.01346460958222596
+    },
+    {
+      "feature": "MaxAbsPartialCharge",
+      "importance": 0.013127486699918756
+    },
+    {
+      "feature": "BCUT2D_LOGPHI",
+      "importance": 0.012855339845427204
+    }
+  ]
+}
